@@ -1,0 +1,115 @@
+/* Manrope: 200–800 */
+@import "@fontsource/manrope/200.css";
+@import "@fontsource/manrope/300.css";
+@import "@fontsource/manrope/400.css";
+@import "@fontsource/manrope/500.css";
+@import "@fontsource/manrope/600.css";
+@import "@fontsource/manrope/700.css";
+@import "@fontsource/manrope/800.css";
+
+/* Mulish: 200–900 */
+@import "@fontsource/mulish/200.css";
+@import "@fontsource/mulish/300.css";
+@import "@fontsource/mulish/400.css";
+@import "@fontsource/mulish/500.css";
+@import "@fontsource/mulish/600.css";
+@import "@fontsource/mulish/700.css";
+@import "@fontsource/mulish/800.css";
+@import "@fontsource/mulish/900.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* user-select: none; */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    pointer-events: none;
+}
+
+.page,
+.siteHeader,
+.siteFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 50px 100px;
+    gap: 50px;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+:root {
+    --mulish: 'Mulish', sans-serif;
+    --sizeH1: clamp(1.25rem, 0.9531rem + 1.3575vw, 3.125rem);
+    --sizeH2: clamp(1rem, 0.7624rem + 1.086vw, 2.5rem);
+    --sizeH3: clamp(1rem, 0.8812rem + 0.543vw, 1.75rem);
+    --sizeText: clamp(0.75rem, 0.6906rem + 0.2715vw, 1.125rem);
+    --blue: #2A2F59;
+    --red: #AC182E;
+    --white: #FFF;
+    --black: #000;
+    --green: #1FC9C4;
+}
+
+a {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: none;
+}
+
+ul,
+ol {
+    padding-left: 20px;
+}
+
+@media (max-width: 1440px) {
+    .page,
+    .siteHeader,
+    .siteFooter {
+        padding: 50px;
+    }
+    
+
+    .page .container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .page,
+    .siteHeader,
+    .siteFooter {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 700px) {
+    .page,
+    .siteHeader,
+    .siteFooter {
+        padding: 25px 10px;
+        gap: 25px;
+    }
+}

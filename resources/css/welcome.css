@@ -1,0 +1,153 @@
+.siteHeader .container{
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #1FC9C426;
+    padding: 25px;
+    border-radius: 24px;
+    align-items: center;
+}
+
+.container .menu{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.container .menu .menuItem{
+    color: var(--blue);
+    font-family: Mulish;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: 0.5s;
+    position: relative;
+}
+
+.container .headerInfo{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.container .headerInfo .blindMode{
+    width: 40px;
+    height: 40px;
+}
+
+.headerInfo .phone{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    font-family: Mulish;
+    font-size: 20px;
+    color: var(--blue);
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+.headerInfo .phone:hover{
+    color: var(--red);
+}
+
+.headerInfo .buttonHead{
+    font-family: Mulish;
+    background-color: var(--red);
+    color: var(--white);
+    padding: 15px;
+    font-weight: 700;
+    border-radius: 16px;
+}
+
+.container .menu .menuItem:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--red);
+    
+    /* главное */
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.5s ease;
+}
+
+.container .menu .menuItem:hover::after{
+    transform: scaleX(1);
+}
+
+.container .menu .menuItem:hover{
+    color: var(--red);
+}
+
+@media(max-width: 1200px){
+    /* Скрываем меню */
+    .container .menu {
+        display: none;
+        position: absolute;
+        top: 100%;        /* прямо под хедером */
+        right: 0;         /* привязка к правому краю */
+        width: 200px;     /* ширина выпадающего меню */
+        flex-direction: column;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        border-radius: 0 0 24px 24px;
+        z-index: 10;
+    }
+
+    .container .menu.active {
+        display: flex;
+    }
+
+    /* Бургер справа */
+    .burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        order: 1; /* бургер остаётся справа в потоке */
+    }
+
+    .burger span {
+        display: block;
+        height: 4px;
+        width: 100%;
+        background-color: var(--blue);
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    .burger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .burger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .burger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+/* 
+    .buttonHead{
+        display: none;
+    } */
+
+    .blindMode{
+        display: none;
+    }
+}
+
+@media(max-width: 700px){
+    .buttonHead{
+        display: none;
+    }
+    
+    .phone{
+        font-size: 16px;
+    }
+}
+
