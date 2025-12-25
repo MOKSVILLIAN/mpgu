@@ -23,7 +23,7 @@
         <img src="images\logo\logo 1.svg">
         <div class="headerInfo">
             <a class="phone" href="tel:+79882533485"> <img src="images\svg\Vector.svg">+79882533485</a>
-            <div class="buttonHead modal">Заказать звонок</div>
+            <div class="buttonHead modal">Заказать звонок хуй</div>
             <img class="blindMode" src="images\svg\Vector (1).svg">
         </div>
     </div>
